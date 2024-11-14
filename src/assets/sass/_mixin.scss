@@ -1,0 +1,27 @@
+$thinfontweight : 100;
+$boldfontweight : 600;
+$textcolor : #EAA57F;
+$textcolortwo : #F1A619;
+$textfontname : "DM Sans", sans-serif;
+$textfontnametwo : "Bebas Neue", sans-serif;
+
+@mixin button {
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+
+    &:focus {
+        box-shadow: 0 0 0 transparent;
+    }
+}
+
+@mixin width {
+    width: 100%;
+    height: 100vh;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

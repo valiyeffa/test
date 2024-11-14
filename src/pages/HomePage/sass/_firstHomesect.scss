@@ -1,0 +1,236 @@
+#home {
+    .home-first-section {
+        @include width();
+        background-image: url("https://coppola.qodeinteractive.com/wp-content/uploads/2021/11/h1-rev-bg-img-new.jpg");
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+
+        .first-sect-overlay {
+
+            .first-text {
+                @include width();
+                @include flex();
+                justify-content: center;
+                position: relative;
+                flex-direction: column;
+                font-family: $textfontname;
+
+                p {
+                    transform: translateY(-75px);
+                    color: white;
+                    font-weight: 500;
+                    font-size: 1.1em;
+                    animation-name: logantextp_Animation;
+                    animation-duration: 3s;
+                }
+
+                .logan-overlay {
+                    position: relative;
+                    transform: translateY(-105px);
+                    animation-name: logantexth_Animation;
+                    animation-duration: 2s;
+
+                    h2 {
+                        font-family: $textfontnametwo;
+                        font-size: 175px;
+                        font-weight: $boldfontweight;
+                        letter-spacing: 10px;
+                        color: $textcolortwo;
+                    }
+
+                    .logan-pus {
+                        position: absolute;
+                        top: 0;
+                        transform: translate(-23px, 30px);
+
+                        img {
+                            width: 410px;
+                        }
+                    }
+                }
+
+                .first-sect-body {
+                    position: absolute;
+
+                    .car-img {
+                        width: 997px;
+                        transform: translate(-40px, 62px);
+                        animation-name: car_Animation;
+                        animation-duration: 2s;
+                    }
+                }
+            }
+        }
+
+        .black-shadow {
+            position: absolute;
+            bottom: 0;
+            opacity: 0.7;
+            width: 100%;
+            height: 43%;
+        }
+
+        .right-bottom-text {
+            position: absolute;
+            @include flex();
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+            width: 370px;
+            bottom: 60px;
+            right: 90px;
+            font-family: $textfontname;
+
+            h3 {
+                width: 100%;
+                color: $textcolortwo;
+                font-weight: 300;
+                font-size: 2em;
+                letter-spacing: 1px;
+                animation-name: righttext_Animation;
+                animation-duration: 1.5s;
+            }
+
+            p {
+                color: white;
+                animation-name: righttext_Animation;
+                animation-duration: 2s;
+            }
+
+            .award-year {
+                width: 100%;
+                @include flex();
+                animation-name: righttext_Animation;
+                animation-duration: 3s;
+            }
+        }
+    }
+}
+
+@keyframes car_Animation {
+    0% {
+        transform: translate(50px, 62px);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateX(0, 62px);
+        opacity: 1;
+    }
+}
+
+@keyframes logantextp_Animation {
+    0% {
+        transform: translateY(-130px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-75px);
+        opacity: 1;
+    }
+}
+
+@keyframes logantexth_Animation {
+    0% {
+        transform: translate(-100px,-105px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0,-105px);
+        opacity: 1;
+    }
+}
+
+@keyframes righttext_Animation {
+    0% {
+        transform: translateY(120px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        
+    }
+}
+
+@media (max-width: 1024px) {
+    #home {
+        .home-first-section {
+            .right-bottom-text {
+                width: 42%;
+                bottom: 20px;
+                right: 50px;
+
+                h3 {
+                    width: 100%;
+                }
+
+                .award-year {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    #home {
+        .home-first-section {
+
+            .first-sect-overlay {
+
+                .first-text {
+                    width: 100%;
+
+                    .logan-overlay {
+                        h2 {
+                            font-size: 100px;
+                        }
+                    }
+
+                    .first-sect-body {
+                        position: absolute;
+
+                        .car-img {
+                            width: 100%;
+                            transform: translate(-20px, -27px);
+                        }
+                    }
+                }
+            }
+
+            .black-shadow {
+                opacity: 1;
+                height: 60%;
+            }
+
+            .right-bottom-text {
+                width: 100%;
+                bottom: 80px;
+                right: 0;
+
+                h3 {
+                    display: none;
+                }
+
+                p {
+                    display: none;
+                }
+
+                .award-year {
+                    @include flex();
+                    justify-content: space-around;
+
+                    img {
+                        width: 5em;
+                    }
+                }
+            }
+        }
+    }
+}

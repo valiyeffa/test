@@ -1,0 +1,99 @@
+#home {
+    .scnd-home-sect {
+        background-color: #000000;
+        font-family: $textfontname;
+
+        .container-fluid {
+            width: 95%;
+
+            .scnd-sect-title {
+                width: 100%;
+                padding-top: 100px;
+                margin-left: 25px;
+
+                .row {
+                    align-items: center;
+
+                    span {
+                        color: white;
+                        font-size: 1.1em;
+                    }
+
+                    .scnd-title {
+                        color: white;
+
+                        h3 {
+                            width: 70%;
+                            font-size: 2.8em;
+                            word-spacing: 5px;
+                            line-height: 45px;
+                        }
+
+                        p {
+                            width: 67%;
+                            font-size: 1.1em;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+          }
+          
+          .swiper-slide {
+            width: 55rem;
+            overflow: hidden;
+            position: relative;
+          
+            .slider-btn {
+              position: absolute;
+              top: 25px;
+              right: 25px;
+              @include button();
+              border: 2px solid white;
+              color: white;
+              border-radius: 50%;
+              padding: 13px 20px;
+              font-size: 1.4em;
+              transition: all 0.3s ease;
+          
+              &:hover{
+                background-color: white;
+                color: black;
+              }
+            }
+          
+            .slider-text {
+              position: absolute;
+              bottom: 20px;
+              color: white;
+              left: 25px;
+              line-height: 15px;
+          
+              h4 {
+                font-size: 2em;
+              }
+          
+              p {
+                font-size: 1.2em;
+              }
+            }
+          }
+          
+          .collection {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .swiper-slide img {
+            width: 100%;
+          }
+    }
+}
